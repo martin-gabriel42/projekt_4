@@ -35,15 +35,47 @@ Tyto pohledy slouží zejména k:
    Jednoduchý výběr potenciálně relevantních dat z tabulky economies.
 
 
+
 Popis tvorby dotazů a odpovědi na výzkumné otázky.
 
 1. Otázka: Rostou v průběhu let mzdy ve všech odvětvích, nebo v některých klesají?
+
+  Provedení dotazu: Dotaz má 2 varianty. Záleží jestli nás zajímá meziroční pokles mezd, nebo pokles za celé měřené období.
+  V první variantě se jedná o prostý SELECT s klauzulí WHERE.
+  V druhé variantě musíme získat první a poslední rok měření, nominální mzdu a přepočetnou mzdu pro všchna odvětví. Toho je dosaženo pomocí funkce FIRST_VALUE.
+
+  Odpověď: Existují jednotlivé roky, ve kterých nominální nebo přepočetná mzda výrazně klesá, zejména pak roky 2008-2010 (nejspíše důsledkem finanční krize) a 
+           také roky 2013 a 2014.
+           
+           Za zmínku stojí odvětví Administrativní a podpůrné činnosti v letech 2013/2014,
+           
+           Peněžnictví a pojišťovnictví v období po finanční krizi v roce 2008,
+           
+           Těžba a dobývání zaznamenávají prudký pokles v období 2013 - 2016.
+           
+           Celkově však mzdy mají rostoucí trend a neexistuje odvětví, které by za měřené období nezaznamenalo celkový nárůst.
    
-2. Otázka: Kolik je možné si koupit litrů mléka a kilogramů chleba za první a poslední srovnatelné období v dostupných datech cen a mezd?
+3. Otázka: Kolik je možné si koupit litrů mléka a kilogramů chleba za první a poslední srovnatelné období v dostupných datech cen a mezd?
 
-3. Otázka: Která kategorie potravin zdražuje nejpomaleji (je u ní nejnižší percentuální meziroční nárůst)?
+   Provedení dotazu: 
 
-4. Otázka: Existuje rok, ve kterém je rozdíl mezi růstem průměrných cen potravin a mezd vyšší než 10 procent?
-  
-6. Otázka: Má výška HDP vliv na změny ve mzdách a cenách potravin? Neboli, pokud HDP vzroste výrazněji v jednom roce,
+   Odpověď:
+
+5. Otázka: Která kategorie potravin zdražuje nejpomaleji (je u ní nejnižší percentuální meziroční nárůst)?
+
+   Provedení dotazu: 
+
+   Odpověď:
+   
+7. Otázka: Existuje rok, ve kterém je rozdíl mezi růstem průměrných cen potravin a mezd vyšší než 10 procent?
+
+    Provedení dotazu: 
+
+    Odpověď:
+   
+9. Otázka: Má výška HDP vliv na změny ve mzdách a cenách potravin? Neboli, pokud HDP vzroste výrazněji v jednom roce,
            projeví se to na cenách potravin či mzdách ve stejném nebo následujícím roce výraznějším růstem?
+
+     Provedení dotazu: 
+
+      Odpověď:
