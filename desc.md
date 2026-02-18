@@ -2,7 +2,7 @@ Tento dokument obsahuje popis mezivýsledků a odpovědi na výzkumné otázky z
 
 Popis tvorby tabulek:
 
-Před vytvořením tabulky t_martin_gabriel_project_SQL_primary_final je byly vytvořené dva pohledy:
+Před vytvořením tabulky t_martin_gabriel_project_SQL_primary_final byly vytvořené dva pohledy:
 
   1. v_martin_gabriel_czechia_price_joined
   2. v_martin_gabriel_czechia_payroll_joined
