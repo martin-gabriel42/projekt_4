@@ -23,6 +23,6 @@ výpočtu meziročních změn mezd v odvětvích a výpočtu mezročních změn 
      Je zde použito filtrování pomocí cp.value_type_code = 5958, což nám zanechá pouze informace o mzdách.
     
   
-3. Tvorba tabulky t_martin_gabriel_project_SQL_secondary_final:
+2. Tvorba tabulky t_martin_gabriel_project_SQL_secondary_final:
 
    Jednoduchý výběr potenciálně relevantních dat z tabulky economies.
