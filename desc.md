@@ -33,3 +33,17 @@ Tyto pohledy slouží zejména k:
 2. Tvorba tabulky t_martin_gabriel_project_SQL_secondary_final:
 
    Jednoduchý výběr potenciálně relevantních dat z tabulky economies.
+
+
+Popis tvorby dotazů a odpovědi na výzkumné otázky.
+
+1. Otázka: Rostou v průběhu let mzdy ve všech odvětvích, nebo v některých klesají?
+   
+2. Otázka: Kolik je možné si koupit litrů mléka a kilogramů chleba za první a poslední srovnatelné období v dostupných datech cen a mezd?
+
+3. Otázka: Která kategorie potravin zdražuje nejpomaleji (je u ní nejnižší percentuální meziroční nárůst)?
+
+4. Otázka: Existuje rok, ve kterém je rozdíl mezi růstem průměrných cen potravin a mezd vyšší než 10 procent?
+  
+6. Otázka: Má výška HDP vliv na změny ve mzdách a cenách potravin? Neboli, pokud HDP vzroste výrazněji v jednom roce,
+           projeví se to na cenách potravin či mzdách ve stejném nebo následujícím roce výraznějším růstem?
