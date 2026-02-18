@@ -40,11 +40,15 @@ Popis tvorby dotazů a odpovědi na výzkumné otázky.
 
 1. Otázka: Rostou v průběhu let mzdy ve všech odvětvích, nebo v některých klesají?
 
-  Provedení dotazu: Dotaz má 2 varianty. Záleží jestli nás zajímá meziroční pokles mezd, nebo pokles za celé měřené období.
+  Provedení dotazu: 
+  
+  Dotaz má 2 varianty. Záleží jestli nás zajímá meziroční pokles mezd, nebo pokles za celé měřené období.
   V první variantě se jedná o prostý SELECT s klauzulí WHERE.
   V druhé variantě musíme získat první a poslední rok měření, nominální mzdu a přepočetnou mzdu pro všchna odvětví. Toho je dosaženo pomocí funkce FIRST_VALUE.
 
-  Odpověď: Existují jednotlivé roky, ve kterých nominální nebo přepočetná mzda výrazně klesá, zejména pak roky 2008-2010 (nejspíše důsledkem finanční krize) a 
+  Odpověď: 
+  
+  Existují jednotlivé roky, ve kterých nominální nebo přepočetná mzda výrazně klesá, zejména pak roky 2008-2010 (nejspíše důsledkem finanční krize) a 
            také roky 2013 a 2014.
            Za zmínku stojí odvětví Administrativní a podpůrné činnosti v letech 2013/2014,
            Peněžnictví a pojišťovnictví v období po finanční krizi v roce 2008,
