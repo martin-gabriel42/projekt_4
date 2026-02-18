@@ -30,6 +30,6 @@ Tyto pohledy slouží zejména k:
      Filtruje se pomocí cp.value_type_code = 5958, aby zůstaly pouze informace o mzdách.
     
   
-3. Tvorba tabulky t_martin_gabriel_project_SQL_secondary_final:
+2. Tvorba tabulky t_martin_gabriel_project_SQL_secondary_final:
 
    Jednoduchý výběr potenciálně relevantních dat z tabulky economies.
