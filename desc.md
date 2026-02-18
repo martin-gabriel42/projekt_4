@@ -55,7 +55,7 @@ Peněžnictví a pojišťovnictví v období po finanční krizi v roce 2008,
 Těžba a dobývání zaznamenávají prudký pokles v období 2013 - 2016.
 Celkově však mzdy mají rostoucí trend a neexistuje odvětví, které by za měřené období nezaznamenalo celkový nárůst.
    
-3. Otázka: Kolik je možné si koupit litrů mléka a kilogramů chleba za první a poslední srovnatelné období v dostupných datech cen a mezd?
+2. Otázka: Kolik je možné si koupit litrů mléka a kilogramů chleba za první a poslední srovnatelné období v dostupných datech cen a mezd?
 
 Provedení dotazu:
 
@@ -65,7 +65,7 @@ Odpověď:
 
 Odpovědi lze najít pro každé odvětví zvlášť ve výsledku dotazu.
 
-5. Otázka: Která kategorie potravin zdražuje nejpomaleji (je u ní nejnižší percentuální meziroční nárůst)?
+3. Otázka: Která kategorie potravin zdražuje nejpomaleji (je u ní nejnižší percentuální meziroční nárůst)?
 
 Provedení dotazu:
 
@@ -80,7 +80,7 @@ Odpověď pro 1. variantu lze získat po provedení dotazu pro každý rok zvlá
 Celkově největší pokles cen zaznamenal cukr krystalový.
 Celkově nejmenší nárůst cen zaznamenaly banány žluté.
 
-7. Otázka: Existuje rok, ve kterém je rozdíl mezi růstem průměrných cen potravin a mezd vyšší než 10 procent?
+4. Otázka: Existuje rok, ve kterém je rozdíl mezi růstem průměrných cen potravin a mezd vyšší než 10 procent?
 
 Provedení dotazu:
 
@@ -91,9 +91,16 @@ Odpověď:
 
 V roce 2009 je rozdíl mezi růstem průměrné nominální mzdy a poklesem průměrných cen potravin 10,42 procent.
    
-9. Otázka: Má výška HDP vliv na změny ve mzdách a cenách potravin? Neboli, pokud HDP vzroste výrazněji v jednom roce,
-           projeví se to na cenách potravin či mzdách ve stejném nebo následujícím roce výraznějším růstem?
+5. Otázka: Má výška HDP vliv na změny ve mzdách a cenách potravin? Neboli, pokud HDP vzroste výrazněji v jednom roce,
+projeví se to na cenách potravin či mzdách ve stejném nebo následujícím roce výraznějším růstem?
 
-     Provedení dotazu: 
+Provedení dotazu: 
 
-      Odpověď:
+Podobně jako u předchozí otázky je nejdříve nutné spočítat průměrnou nominální mzdu průmerné ceny, aby bylo možné dopočítat jejich meziroční změnu.
+Protože nemáme dostupné průměrné hodnoty mezd a cen, nemůžeme spočítat jejich změnu pro rok 2006.
+Poté následuje spojení se sekundární tabulkou, pomocí které lze dopočítat růst HDP v Česku.
+
+Odpověď:
+
+Existuje vztah mezi změnou HDP a změnou mezd, mzdy typciky následují vývoj HDP se spožděním do 1 roku.
+Vztah mezi změnou HDP a změnou cen není tak jasný, ale cney obecně následují vývoj HDP se spožděním 1 (období 2008 až 2010) až 3 (období 2012 až 2017) let.
