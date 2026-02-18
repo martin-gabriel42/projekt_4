@@ -46,13 +46,9 @@ Popis tvorby dotazů a odpovědi na výzkumné otázky.
 
   Odpověď: Existují jednotlivé roky, ve kterých nominální nebo přepočetná mzda výrazně klesá, zejména pak roky 2008-2010 (nejspíše důsledkem finanční krize) a 
            také roky 2013 a 2014.
-           
            Za zmínku stojí odvětví Administrativní a podpůrné činnosti v letech 2013/2014,
-           
            Peněžnictví a pojišťovnictví v období po finanční krizi v roce 2008,
-           
            Těžba a dobývání zaznamenávají prudký pokles v období 2013 - 2016.
-           
            Celkově však mzdy mají rostoucí trend a neexistuje odvětví, které by za měřené období nezaznamenalo celkový nárůst.
    
 3. Otázka: Kolik je možné si koupit litrů mléka a kilogramů chleba za první a poslední srovnatelné období v dostupných datech cen a mezd?
