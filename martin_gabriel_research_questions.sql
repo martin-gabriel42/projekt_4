@@ -1,3 +1,13 @@
+--===================================================================================================
+-- martin_gabriel_research_questions – čtvrtý projekt do Engeto Online Akademie
+-- Autor: Martin Gabriel
+--===================================================================================================
+-- Tento skript slouží k zodpovězení výzkumných otázek
+-- 1. a 3. dotaz má dvě varianty, které odpovídají meziročním změnám, respektive změnám za celé období
+
+-- Samotné odpovědi na otázky se nachází v souboru doc.md v github repozitáři
+--===================================================================================================
+
 --1) Rostou v průběhu let mzdy ve všech odvětvích, nebo v některých klesají?
 
 -- 1. varianta: pokles mezd v daných letech
@@ -13,7 +23,7 @@ WHERE 1=2
 	OR tmgpspf.fte_perc_growth <= 0
 ORDER BY
 	tmgpspf.industry_branch,
-	tmgpspf.year;
+	tmgpspf.year ASC;
 
 -- 2. varianta: pokles mezd za celé měřené období
 WITH measured_wages AS (
@@ -61,14 +71,17 @@ SELECT
 	tmgpspf.year,
 	tmgpspf.industry_branch,
 	tmgpspf.category_name,
-	tmgpspf.nominal_wage,
-	tmgpspf.avg_price,
+	--tmgpspf.nominal_wage,
+	--tmgpspf.avg_price,
 	ROUND(tmgpspf.nominal_wage / avg_price, 0) AS available_amount, --množství dostupných potravin
 	tmgpspf.price_unit
 FROM
 	t_martin_gabriel_project_sql_primary_final tmgpspf
 WHERE 1=1
-	AND tmgpspf.year IN (2006, 2018)
+	AND tmgpspf.year IN (
+		SELECT MAX(tmgpspf.year) FROM t_martin_gabriel_project_sql_primary_final tmgpspf
+		UNION
+		SELECT MIN(tmgpspf.year) FROM t_martin_gabriel_project_sql_primary_final tmgpspf)
 	AND tmgpspf.category_name IN ('Chléb konzumní kmínový', 'Mléko polotučné pasterované')
 ORDER BY
 	tmgpspf.category_name,
@@ -148,7 +161,7 @@ WITH stats_growth AS (
 		--avg_stats.avg_nw,
 		--avg_stats.avg_prices,
 		ROUND(avg_stats.avg_nw / LAG(avg_stats.avg_nw) OVER (
-			ORDER BY avg_stats.year) * 100 - 100, 0) AS avg_nom_wage_perc_growth,
+			ORDER BY avg_stats.year) * 100 - 100, 2) AS avg_nom_wage_perc_growth,
 		ROUND(avg_stats.avg_prices / LAG(avg_stats.avg_prices) OVER (
 			ORDER BY avg_stats.year) * 100 - 100, 2) AS avg_prices_perc_growth
 	FROM (
@@ -165,8 +178,8 @@ SELECT
 	sg.avg_nom_wage_perc_growth - sg.avg_prices_perc_growth AS diff
 FROM
 	stats_growth sg
-WHERE
-	ABS(sg.avg_nom_wage_perc_growth - sg.avg_prices_perc_growth) > 10
+WHERE 1=1
+	AND ABS(sg.avg_nom_wage_perc_growth - sg.avg_prices_perc_growth) > 10
 ORDER BY
 	sg.year;
 
@@ -203,3 +216,5 @@ INNER JOIN (
 	ON wages_and_prices.year = gdp_growth.year
 ORDER BY
 	wages_and_prices.year;
+
+
