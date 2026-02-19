@@ -45,41 +45,49 @@ Filtr cp.value_type_code = 5958 zajišťuje, že zůstávají pouze údaje o mzd
 
 ### Provedení dotazu: 
   
-Dotaz má 2 varianty. Záleží jestli nás zajímá meziroční pokles mezd, nebo pokles za celé měřené období.
-V první variantě se jedná o prostý SELECT s klauzulí WHERE.
-V druhé variantě musíme získat první a poslední rok měření, nominální mzdu a přepočetnou mzdu pro všchna odvětví. Toho je dosaženo pomocí funkce FIRST_VALUE.
+Dotaz má 2 varianty:
+
+1.Analýza meziročního poklesu mezd pomocí jednoduchého SELECT s podmínkou WHERE.
+
+2. Analýza celkového vývoje za celé období – zde je nutné získat první a poslední rok měření a odpovídající hodnoty nominální i přepočtené mzdy pomocí funkce FIRST_VALUE.
 
 ### Odpověď: 
   
-Existují jednotlivé roky, ve kterých nominální nebo přepočetná mzda výrazně klesá, zejména pak roky 2008-2010 (nejspíše důsledkem finanční krize) a 
-také roky 2013 a 2014.
-Za zmínku stojí odvětví Administrativní a podpůrné činnosti v letech 2013/2014,
-Peněžnictví a pojišťovnictví v období po finanční krizi v roce 2008,
-Těžba a dobývání zaznamenávají prudký pokles v období 2013 - 2016.
-Celkově však mzdy mají rostoucí trend a neexistuje odvětví, které by za měřené období nezaznamenalo celkový nárůst.
+Existují jednotlivé roky, ve kterých nominální i přepočtené mzdy výrazně klesají, zejména období 2008–2010 (pravděpodobně v důsledku globální finanční krize, např. po pádu banky Lehman Brothers) a také roky 2013 a 2014.
+
+Výraznější pokles byl zaznamenán například:
+
+- v odvětví Administrativní a podpůrné činnosti (2013–2014),
+- v odvětví Peněžnictví a pojišťovnictví po finanční krizi roku 2008.
+- v odvětví Těžba a dobývání (2013–2016).
+
+Celkově však mzdy vykazují dlouhodobě rostoucí trend a neexistuje odvětví, které by za celé sledované období nezaznamenalo celkový nárůst.
    
 ## 2. Otázka: Kolik je možné si koupit litrů mléka a kilogramů chleba za první a poslední srovnatelné období v dostupných datech cen a mezd?
 
 ### Provedení dotazu:
 
-Jednoduchý výpočet v závislosti na výši nominálních mezd a průměrných cen.
+Výpočet je proveden jako podíl nominální mzdy a průměrné ceny konkrétní potraviny v daném roce.
 
 ### Odpověď:
 
-Odpovědi lze najít pro každé odvětví zvlášť ve výsledku dotazu.
+Konkrétní hodnoty jsou uvedeny ve výsledku dotazu pro jednotlivá odvětví. Obecně lze pozorovat, že kupní síla v odvětví v průběhu času vzrostla.
 
 ## 3. Otázka: Která kategorie potravin zdražuje nejpomaleji (je u ní nejnižší percentuální meziroční nárůst)?
 
 ### Provedení dotazu:
 
-Analogicky jako u 1. otázky existují 2 varianty v závislosti na měřeném období.
-V první variantě je pro výběr použita funkce RANK ve vnořeném SELECTu a WHERE filtr.
-V druhé variantě je použitý analogický postup jako v 1. otázce.
-V obou variantých je zakomentována možnost filtrovat pouze pro nárůst cen (nepočítáme pokles).
+Opět existují dvě varianty:
+
+1. Výběr nejnižšího meziročního nárůstu pomocí funkce RANK ve vnořeném dotazu.
+2. Výpočet změny mezi prvním a posledním rokem sledovaného období.
+
+V obou variantách je možné filtrovat pouze kladné meziroční změny (ignorovat pokles).
 
 ### Odpověď:
 
 Odpověď pro 1. variantu lze získat po provedení dotazu pro každý rok zvlášť.
+
 Celkově největší pokles cen zaznamenal cukr krystalový.
 Celkově nejmenší nárůst cen zaznamenaly banány žluté.
 
