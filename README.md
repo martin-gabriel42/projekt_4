@@ -12,7 +12,7 @@ Obsah repozitáře
 
     SQL skript obsahující dotazy, pomocí kterých lze přímo odpovědět na výzkumné otázky.
 
- 3. desc.md
+ 3. doc.md
 
     Textový soubor obsahující:
     popis mezivýsledků,
