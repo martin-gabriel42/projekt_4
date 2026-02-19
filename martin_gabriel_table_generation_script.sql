@@ -1,5 +1,5 @@
 -- ==========================================================
--- table_generation_script – čtvrtý projekt do Engeto Online Akademie
+-- martin_gabriel_table_generation_script – čtvrtý projekt do Engeto Online Akademie
 -- Autor: Martin Gabriel
 -- ==========================================================
 -- Tento skript vytváří dva pohledy a dvě výsledné tabulky.
@@ -18,7 +18,7 @@
 --Z těchto dat je možné spouštět skripty připravené k zodpovězení výzkumných otázek
 -- ==========================================================
 
-DROP VIEW IF EXISTS  v_martin_gabriel_czechia_price_joined;
+--DROP VIEW IF EXISTS  v_martin_gabriel_czechia_price_joined;
 CREATE OR REPLACE VIEW v_martin_gabriel_czechia_price_joined AS (
 	SELECT
 		measured_year,
@@ -52,7 +52,7 @@ CREATE OR REPLACE VIEW v_martin_gabriel_czechia_price_joined AS (
 	);
 
 
-DROP VIEW IF EXISTS v_martin_gabriel_czechia_payroll_joined;
+--DROP VIEW IF EXISTS v_martin_gabriel_czechia_payroll_joined;
 CREATE OR REPLACE VIEW v_martin_gabriel_czechia_payroll_joined AS (
 	SELECT
 		industry_branch,
@@ -67,6 +67,7 @@ CREATE OR REPLACE VIEW v_martin_gabriel_czechia_payroll_joined AS (
 		payroll_year
 	FROM
 		(SELECT
+			--Rozdělení záznamu o mzdách na sloupce o nominálních a fte mzdách
 			MAX(CASE WHEN cpc.code = 100 THEN value END) AS nominal_wage,
     		MAX(CASE WHEN cpc.code = 200 THEN value END) AS full_time_equivalent,
 			cpib.name AS industry_branch,
@@ -83,6 +84,7 @@ CREATE OR REPLACE VIEW v_martin_gabriel_czechia_payroll_joined AS (
 			cp.value_type_code = 5958
 			AND cp.value IS NOT NULL
 			AND cpib.name IS NOT NULL
+		--GROUP BY klauzule pro MAX funkce
 		GROUP BY
 			cpib.name,
 			cp.payroll_year
@@ -92,7 +94,7 @@ CREATE OR REPLACE VIEW v_martin_gabriel_czechia_payroll_joined AS (
 	);
 
 
-DROP TABLE IF EXISTS t_martin_gabriel_project_SQL_primary_final;
+--DROP TABLE IF EXISTS t_martin_gabriel_project_SQL_primary_final;
 CREATE TABLE t_martin_gabriel_project_SQL_primary_final AS (
 	SELECT
 		measured_year AS year,
@@ -113,7 +115,7 @@ CREATE TABLE t_martin_gabriel_project_SQL_primary_final AS (
 	);
 
 
-DROP TABLE IF EXISTS t_martin_gabriel_project_SQL_secondary_final;
+--DROP TABLE IF EXISTS t_martin_gabriel_project_SQL_secondary_final;
 CREATE TABLE t_martin_gabriel_project_SQL_secondary_final AS (
 	SELECT
 		e.year,
