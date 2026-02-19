@@ -95,23 +95,27 @@ Celkově nejmenší nárůst cen zaznamenaly banány žluté.
 
 ### Provedení dotazu:
 
-Zde je nejdříve nutné spočítat průměrnou všech nominálních mezd a cen potravin, aby bylo možné spočítat jejich změnu.
-Toho je dosaženo pomocí funkcí AVG a LAG.
+Nejprve je nutné spočítat průměrnou nominální mzdu a průměrnou cenu potravin pomocí funkce AVG.
+Meziroční změna je následně vypočtena pomocí funkce LAG.
 
 ### Odpověď:
 
 V roce 2009 je rozdíl mezi růstem průměrné nominální mzdy a poklesem průměrných cen potravin 10,42 procent.
+
+Rozdíly v jiných letech nepřesáhly 10 procent.
    
-## 5. Otázka: Má výška HDP vliv na změny ve mzdách a cenách potravin? Neboli, pokud HDP vzroste výrazněji v jednom roce,
-projeví se to na cenách potravin či mzdách ve stejném nebo následujícím roce výraznějším růstem?
+## 5. Otázka: Má výška HDP vliv na změny ve mzdách a cenách potravin? Neboli, pokud HDP vzroste výrazněji v jednom roce, projeví se to na cenách potravin či mzdách ve stejném nebo následujícím roce výraznějším růstem?
 
 ### Provedení dotazu: 
 
-Podobně jako u předchozí otázky je nejdříve nutné spočítat průměrnou nominální mzdu průmerné ceny, aby bylo možné dopočítat jejich meziroční změnu.
-Protože nemáme dostupné průměrné hodnoty mezd a cen, nemůžeme spočítat jejich změnu pro rok 2006.
-Poté následuje spojení se sekundární tabulkou, pomocí které lze dopočítat růst HDP v Česku.
+Analogicky k předchozí otázce je nejprve spočítána průměrná nominální mzda a průměrná cena potravin a jejich meziroční změna.
+
+Následně je provedeno spojení se sekundární tabulkou obsahující údaje o HDP České republiky, což umožňuje analyzovat vztah mezi vývojem HDP, mezd a cen.
+
+Protože nejsou dostupná data pro výpočet meziroční změny za rok 2006, tento rok není do analýzy zahrnut.
 
 ### Odpověď:
 
 Existuje vztah mezi změnou HDP a změnou mezd, mzdy typciky následují vývoj HDP se spožděním do 1 roku.
-Vztah mezi změnou HDP a změnou cen není tak jasný, ale cney obecně následují vývoj HDP se spožděním 1 (období 2008 až 2010) až 3 (období 2012 až 2017) let.
+
+Vztah mezi HDP a cenami potravin je méně jednoznačný. Ceny obecně reagují na vývoj HDP se zpožděním 1 roku (období 2008–2010) až 3 let (období 2012–2017).
