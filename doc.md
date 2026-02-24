@@ -4,27 +4,24 @@ Tento dokument obsahuje popis mezivýsledků a odpovědi na výzkumné otázky z
 
 # Popis tvorby tabulek:
 
-Před vytvořením tabulky t_martin_gabriel_project_SQL_primary_final byly vytvořené dva pohledy:
+Tabulky byly vytvořeny pomocí CTE, vnořených SELECT dotazů a agregačníhc nebo window funkcí.
 
-  1. v_martin_gabriel_czechia_price_joined
-  2. v_martin_gabriel_czechia_payroll_joined
-
-### Účel vytvořených pohledů:
+### Účel mezivýpočtů a CTE:
 
   - propojení sloupců s kódy v tabulkách czechia_payroll a czechia_price s jejich významem uchovaným v číselníkových tabulkách,
   - rozdělení záznamu mezd na fyzické (nominální) a přepočtené (full-time equivalent / FTE),
-  - výpočtu meziročních změn mezd v odvětvích,
-  - výpočtu meziročních změn cen kategorií potravin.
+  - výpočet meziročních změn mezd v odvětvích,
+  - výpočet meziročních změn cen kategorií potravin.
 
 
 ## 1. Vytvoření tabulky t_martin_gabriel_project_SQL_primary_final:
 
-   ### 1.1. Vytvoření pohledu v_martin_gabriel_czechia_price_joined
+   ### 1.1 CTE price_data
    Nejprve je pomocí agregační funkce AVG vypočtena průměrná cena jednotlivých kategorií potravin za daný rok. Tyto hodnoty jsou následně propojeny s číselníkovými tabulkami, aby byly doplněny informace o jednotkách.
 
-Pomocí analytické funkce LAG je následně spočten meziroční vývoj cen. Výsledné procentuální změny jsou zaokrouhleny na jedno desetinné místo.
+Pomocí analytické funkce LAG je následně spočten meziroční vývoj cen. Výsledné změny jsou převedeny na procenta a zaokrouhleny na 2 desetinná místa.
 
-   ### 1.2. Vytvoření pohledu v_martin_gabriel_czechia_payroll_joined
+   ### 1.2. CTE payroll_data
    
    Stejně jako v předchozím případě dochází nejprve k propojení kódů s číselníkovými tabulkami.
 
@@ -35,7 +32,7 @@ Filtr cp.value_type_code = 5958 zajišťuje, že zůstávají pouze údaje o mzd
     
 ## 2. Vytvoření tabulky t_martin_gabriel_project_SQL_secondary_final:
 
-   Tabulka vznikla jednoduchým výběrem potenciálně relevantních dat z tabulky economies. Obsahuje zejména údaje o HDP, které jsou dále využity při analýze vztahu mezi vývojem ekonomiky, mezd a cen.
+   Tabulka vznikla výběrem potenciálně zajímavých dat z tabulky economies a filtrem zemí na základě kontinentu a časového rozmezí pomocí spojení s tabulkou countries. Tabulka obsahuje zejména údaje o HDP, které jsou dále využity při analýze vztahu mezi vývojem ekonomiky, mezd a cen.
 
 
 
