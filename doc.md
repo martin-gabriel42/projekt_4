@@ -52,7 +52,7 @@ Dotaz má 2 varianty:
 
 ### Odpověď: 
   
-Existují jednotlivé roky, ve kterých nominální i přepočtené mzdy výrazně klesají, zejména období 2008–2010 (pravděpodobně v důsledku globální finanční krize, např. po pádu banky Lehman Brothers) a také roky 2013 a 2014.
+Existují jednotlivé roky, ve kterých nominální i přepočtené mzdy výrazně klesají, zejména období 2008–2010 (pravděpodobně v důsledku globální finanční krize) a také roky 2013 a 2014.
 
 Výraznější pokles byl zaznamenán například:
 
@@ -88,6 +88,7 @@ V obou variantách je možné filtrovat pouze kladné meziroční změny (ignoro
 ### Odpověď:
 
 Odpověď pro 1. variantu lze získat po provedení dotazu pro každý rok zvlášť.
+Největší meziroční pokles cen zaznamenala kategorie Rajská jablka červená kulatá v roce 2007, kdy ceny klesly o 30% v porovnání s rokem 2006.
 
 Celkově největší pokles cen zaznamenal cukr krystalový.
 Celkově nejmenší nárůst cen zaznamenaly banány žluté.
