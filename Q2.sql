@@ -25,6 +25,6 @@ WHERE 1=1
 		SELECT MIN(tmgpspf.year) FROM t_martin_gabriel_project_sql_primary_final tmgpspf)
 	AND tmgpspf.category_name IN ('Chléb konzumní kmínový', 'Mléko polotučné pasterované')
 ORDER BY
+	tmgpspf.industry_branch,
 	tmgpspf.category_name,
-	tmgpspf.year,
-	tmgpspf.industry_branch;
+	tmgpspf.year;
