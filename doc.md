@@ -17,7 +17,7 @@ Tabulky byly vytvořeny pomocí CTE, vnořených SELECT dotazů, agregačních a
 ## 1. Vytvoření tabulky t_martin_gabriel_project_SQL_primary_final:
 
    ### 1.1 CTE price_data
-   Nejprve je pomocí agregační funkce AVG vypočtena průměrná cena jednotlivých kategorií potravin za daný rok. Tyto hodnoty jsou následně propojeny s číselníkovými tabulkami, aby byly doplněny informace o jednotkách.
+   Pomocí agregační funkce AVG je vypočtena průměrná cena jednotlivých kategorií potravin za daný rok. Tyto hodnoty jsou propojeny s číselníkovými tabulkami, aby byly doplněny informace o jednotkách.
 
 Pomocí analytické funkce LAG je následně spočten meziroční vývoj cen. Výsledné změny jsou převedeny na procenta a zaokrouhleny na 2 desetinná místa.
 
