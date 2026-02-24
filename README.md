@@ -4,31 +4,31 @@ Tento repozitář obsahuje skripty a doprovodnou dokumentaci sloužící k vytvo
 
 ## Obsah repozitáře
 
-### 1. martin_gabriel_table_generation_script.sql
+### martin_gabriel_table_generation_script.sql
      
 SQL skript, který vytváří podkladová data ve formě dvou tabulek v databázi data_academy_2025_06_11.
 
-### 2. Q1.sql
+### Q1.sql
 
 SQL skript obsahující dotaz, pomocí kterých lze přímo odpovědět na výzkumnou otázku č.1.
 
-### 3. Q2.sql
+### Q2.sql
 
 SQL skript obsahující dotaz, pomocí kterých lze přímo odpovědět na výzkumnou otázku č.2.
 
-### 4. Q3.sql
+### Q3.sql
 
 SQL skript obsahující dotaz, pomocí kterých lze přímo odpovědět na výzkumnou otázku č.3.
 
-### 5. Q4.sql
+### Q4.sql
 
 SQL skript obsahující dotaz, pomocí kterých lze přímo odpovědět na výzkumnou otázku č.4.
 
-### 6. Q5.sql
+### Q5.sql
 
 SQL skript obsahující dotaz, pomocí kterých lze přímo odpovědět na výzkumnou otázku č.5.
 
- ### 7. doc.md
+### doc.md
 
 Textový soubor obsahující:
 - popis tvorby tabulek
