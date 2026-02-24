@@ -46,7 +46,7 @@ Tabulka byla vytvořena na základě dat z tabulky t_martin_gabriel_project_SQL_
   
 Dotaz má 2 varianty:
 
-1.Analýza meziročního poklesu mezd pomocí jednoduchého SELECT s podmínkou WHERE.
+1. Analýza meziročního poklesu mezd pomocí jednoduchého SELECT s podmínkou WHERE.
 
 2. Analýza celkového vývoje za celé období – zde je nutné získat první a poslední rok měření a odpovídající hodnoty nominální i přepočtené mzdy pomocí funkce FIRST_VALUE.
 
