@@ -32,9 +32,9 @@ Filtr cp.value_type_code = 5958 zajišťuje, že zůstávají pouze údaje o mzd
     
 ## 2. Vytvoření tabulky t_martin_gabriel_project_SQL_secondary_final:
 
-Tabulka byla vytvořena na základě dat z tabulky t_martin_gabriel_project_SQL_primary_final. Bez této tabulky nelze sekundární tabulku vytvořit pomocí původního (neupraveného) skriptu.
-
 Tabulka byla vytvořena výběrem relevantních dat z tabulky economies. Pomocí filtru podle kontinentu a časového období byla omezena množina zemí i sledovaných let. Tabulka obsahuje zejména údaje o HDP, které jsou následně využity k analýze vztahu mezi vývojem ekonomiky, mezd a cen.
+
+Tabulka byla vytvořena na základě dat z tabulky t_martin_gabriel_project_SQL_primary_final. Bez této tabulky nelze sekundární tabulku vytvořit pomocí původního (neupraveného) skriptu.
 
 
 
